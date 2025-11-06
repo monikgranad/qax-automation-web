@@ -1,0 +1,53 @@
+{"level":30,"time":"2025-11-04T00:47:33.543Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"Listening on 127.0.0.1:58810"}
+{"level":30,"time":"2025-11-04T00:47:34.194Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-11-04T00:47:36.806Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"Adding browser to stack: chromium, version: 141.0.7390.37"}
+{"level":30,"time":"2025-11-04T00:47:36.809Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-11-04T00:47:36.809Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-11-04T00:47:36.830Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-11-04T00:47:36.832Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@498970c782a38f6b76f2dc4404fe4364\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=0a4fd503-ac22-4e9e-8cf6-ebe689d1bfc3\"}"}
+{"level":30,"time":"2025-11-04T00:47:36.910Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"Setting default timeout for context context=616acd30-835f-4a75-a54e-dd6b77a9096f to 10000"}
+{"level":30,"time":"2025-11-04T00:47:36.911Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"Changed active context: context=616acd30-835f-4a75-a54e-dd6b77a9096f"}
+{"level":30,"time":"2025-11-04T00:47:38.999Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"Video path: undefined"}
+{"level":30,"time":"2025-11-04T00:47:39.000Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"Changed active page"}
+{"level":30,"time":"2025-11-04T00:47:41.977Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"End of node method newPage"}
+{"level":30,"time":"2025-11-04T00:47:42.005Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-11-04T00:47:42.013Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"Strict mode is enabled, find Locator with id=email in page."}
+{"level":30,"time":"2025-11-04T00:47:42.343Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"End of node method fillText"}
+{"level":30,"time":"2025-11-04T00:47:43.355Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"Start of node method click"}
+{"level":30,"time":"2025-11-04T00:47:43.356Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"Strict mode is enabled, find Locator with id=enterimg in page."}
+{"level":30,"time":"2025-11-04T00:47:44.130Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"End of node method click"}
+{"level":30,"time":"2025-11-04T00:47:49.383Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-11-04T00:47:49.493Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"Removed page=5e937fe2-b612-4f85-80f8-5d18b3d76b12 from context=616acd30-835f-4a75-a54e-dd6b77a9096f page stack"}
+{"level":30,"time":"2025-11-04T00:47:51.033Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\venv\Lib\site-packages\Browser\wrapper\index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\venv\Lib\site-packages\Browser\wrapper\index.js:13622:59)
+    at PlaywrightServer.setTimeout (C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\venv\Lib\site-packages\Browser\wrapper\index.js:13873:57)
+    at Object.onReceiveHalfClose (C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-11-04T00:47:51.055Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-04T00:47:51.056Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\venv\Lib\site-packages\Browser\wrapper\index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\venv\Lib\site-packages\Browser\wrapper\index.js:13622:59)
+    at PlaywrightServer.setTimeout (C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\venv\Lib\site-packages\Browser\wrapper\index.js:13873:57)
+    at Object.onReceiveHalfClose (C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-11-04T00:47:51.079Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-04T00:47:51.080Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-04T00:47:51.216Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-11-04T00:47:51.217Z","pid":23476,"hostname":"DESKTOP-4E1GJKU","msg":"End of node method closeAllBrowsers"}

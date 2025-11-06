@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.6 on win32)" generated="2025-10-28T17:49:45.236348" rpa="false" schemaversion="5">
+<suite id="s1" name="Exercise1" source="C:\Users\admin\Documents\QAXpert\WEB\qax-automation-web\Stage_1\Quick_Task\exercise1.robot">
+<test id="s1-t1" name="Enviar un Mensaje" line="11">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-10-28T17:49:47.936739" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\admin\\Documents\\QAXpert\\WEB\\qax-automation-web\\Stage_1\\Quick_Task\\browser\\traces\\temp\\e75645e9-bc19-4500-a6f8-d861cd19b400"}</msg>
+<msg time="2025-10-28T17:49:48.203743" level="INFO">Starting Browser process C:\Users\admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:52847</msg>
+<msg time="2025-10-28T17:49:54.060909" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\admin\\Documents\\QAXpert\\WEB\\qax-automation-web\\Stage_1\\Quick_Task\\browser\\traces\\temp\\e75645e9-bc19-4500-a6f8-d861cd19b400"}</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-10-28T17:49:47.930272" elapsed="6.131569"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-10-28T17:49:54.141095" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "locale": "en-GB",
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-10-28T17:49:54.228305" level="INFO">Successfully created context. </msg>
+<msg time="2025-10-28T17:49:54.228559" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'locale': 'en-GB', 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<arg>locale=en-GB</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-10-28T17:49:54.134086" elapsed="0.094742"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-10-28T17:50:03.553657" level="INFO">Successfully initialized new page object and opened url: https://qaxpert.com/escribenos/</msg>
+<arg>${URL}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-10-28T17:49:54.256936" elapsed="9.297783"/>
+</kw>
+<msg time="2025-10-28T17:50:03.776559" level="INFO">Switching context to context=4ee47e1b-74ca-40e4-8bf0-91d4c8596324 in CURRENT</msg>
+<msg time="2025-10-28T17:50:03.832807" level="INFO">Successfully changed active context: context=4ee47e1b-74ca-40e4-8bf0-91d4c8596324</msg>
+<msg time="2025-10-28T17:50:04.458689" level="INFO">Successfully closed Context</msg>
+<doc>Verificar que el usuario sea redirigido a su página de perfil después de un login exitoso.</doc>
+<tag>critico</tag>
+<tag>positivo</tag>
+<status status="PASS" start="2025-10-28T17:49:47.925961" elapsed="15.662761"/>
+</test>
+<doc>Aprendiendo  todo sobre browser library</doc>
+<status status="PASS" start="2025-10-28T17:49:45.242654" elapsed="20.723165"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">critico</stat>
+<stat pass="1" fail="0" skip="0">positivo</stat>
+</tag>
+<suite>
+<stat name="Exercise1" id="s1" pass="1" fail="0" skip="0">Exercise1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

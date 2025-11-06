@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.6 on win32)" generated="2025-11-03T18:47:28.039025" rpa="false" schemaversion="5">
+<suite id="s1" name="Exercise 2" source="C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\stage_1\02_exercise_2\exercise_2.robot">
+<test id="s1-t1" name="Usando locators en variables" line="8">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-11-03T18:47:29.009378" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\admin\\Documents\\QAXpert\\WEB\\qa-automation-web-robot-framework\\stage_1\\02_exercise_2\\browser\\traces\\temp\\d84c26a7-0258-4cd9-9a65-c7d6a09d2535"}</msg>
+<msg time="2025-11-03T18:47:29.098569" level="INFO">Starting Browser process C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:58810</msg>
+<msg time="2025-11-03T18:47:36.827780" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\admin\\Documents\\QAXpert\\WEB\\qa-automation-web-robot-framework\\stage_1\\02_exercise_2\\browser\\traces\\temp\\d84c26a7-0258-4cd9-9a65-c7d6a09d2535"}</msg>
+<arg>chromium</arg>
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-11-03T18:47:29.006419" elapsed="7.822193"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-11-03T18:47:41.996243" level="INFO">Successfully initialized new page object and opened url: https://demo.automationtesting.in/Index.html</msg>
+<msg time="2025-11-03T18:47:41.996553" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://demo.automationtesting.in/Index.html</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-11-03T18:47:36.835864" elapsed="5.161278"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-11-03T18:47:42.003318" level="INFO">Fills the text 'ninja4testing@qaxpert.com' in the given field.</msg>
+<arg>${TXT_EMAIL}</arg>
+<arg>ninja4testing@qaxpert.com</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-11-03T18:47:42.000877" elapsed="0.360997"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-03T18:47:43.364223" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-03T18:47:42.362841" elapsed="1.001557"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-03T18:47:43.365961" level="INFO">Clicks the element 'id=enterimg'.</msg>
+<arg>${LNK_LOGO}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-03T18:47:43.364920" elapsed="0.784721"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-03T18:47:48.462373" level="INFO">Slept 4 seconds.</msg>
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-03T18:47:44.167221" elapsed="4.320798"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-11-03T18:47:51.049746" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-03T18:47:49.389953" elapsed="1.660215"/>
+</kw>
+<status status="PASS" start="2025-11-03T18:47:29.003972" elapsed="22.046923"/>
+</test>
+<status status="PASS" start="2025-11-03T18:47:28.043660" elapsed="23.033113"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Exercise 2" id="s1" pass="1" fail="0" skip="0">Exercise 2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

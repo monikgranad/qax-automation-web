@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.6 on win32)" generated="2025-11-03T18:57:35.500060" rpa="false" schemaversion="5">
+<suite id="s1" name="exercise 2 getByText" source="C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\stage_1\02_exercise_getByText\exercise_2_getByText.robot">
+<test id="s1-t1" name="Formulario Con Roles Accesibles" line="29">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-11-03T18:57:36.855216" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\admin\\Documents\\QAXpert\\WEB\\qa-automation-web-robot-framework\\stage_1\\02_exercise_getByText\\browser\\traces\\temp\\a158c1f5-8358-4116-96bd-f5d2eb6c2cde"}</msg>
+<msg time="2025-11-03T18:57:36.987513" level="INFO">Starting Browser process C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:59145</msg>
+<msg time="2025-11-03T18:57:42.952170" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\admin\\Documents\\QAXpert\\WEB\\qa-automation-web-robot-framework\\stage_1\\02_exercise_getByText\\browser\\traces\\temp\\a158c1f5-8358-4116-96bd-f5d2eb6c2cde"}</msg>
+<arg>chromium</arg>
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-11-03T18:57:36.852389" elapsed="6.101833"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-11-03T18:57:48.210153" level="INFO">Successfully initialized new page object and opened url: https://demo.automationtesting.in/Register.html</msg>
+<msg time="2025-11-03T18:57:48.210360" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${URL_REGISTER}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-11-03T18:57:42.989599" elapsed="5.221322"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-11-03T18:57:48.215335" level="INFO">Fills the text 'Andrea' in the given field.</msg>
+<arg>${TXT_FIRSTNAME}</arg>
+<arg>Andrea</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-11-03T18:57:48.213410" elapsed="0.363461"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-11-03T18:57:48.586328" level="INFO">Fills the text 'Ramirez' in the given field.</msg>
+<arg>${TXT_LASTNAME}</arg>
+<arg>Ramirez</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-11-03T18:57:48.584660" elapsed="0.104836"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-03T18:57:49.779585" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-03T18:57:48.776754" elapsed="1.003329"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-03T18:57:49.792138" level="INFO">Clicks the element 'text=FeMale'.</msg>
+<arg>${RADIO_FEMALE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-03T18:57:49.786892" elapsed="0.324902"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-03T18:57:51.116788" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-03T18:57:50.114577" elapsed="1.002932"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-03T18:57:51.185289" level="INFO">Clicks the element 'id=checkbox1'.</msg>
+<arg>${CHK_CRICKET}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-03T18:57:51.183077" elapsed="0.613815"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-03T18:57:52.865181" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-03T18:57:51.862590" elapsed="1.003531"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-03T18:57:52.884572" level="INFO">Clicks the element 'id=checkbox2'.</msg>
+<arg>${CHK_MOVIES}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-03T18:57:52.882361" elapsed="0.142752"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-03T18:57:54.044320" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-03T18:57:53.043022" elapsed="1.001630"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-11-03T18:57:54.047468" level="INFO">Selects the option(s) Python by attribute SelectAttribute.label from element id=Skills.</msg>
+<arg>${COMBO_SKILLS}</arg>
+<arg>text</arg>
+<arg>Python</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-03T18:57:54.045691" elapsed="0.143147"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-03T18:57:57.193623" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-03T18:57:54.192346" elapsed="3.001792"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-03T18:57:57.201081" level="INFO">Clicks the element 'role=button[name="Submit"]'.</msg>
+<arg>${BTN_SUBMIT}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-03T18:57:57.197315" elapsed="0.154151"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-03T18:58:00.358589" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-03T18:57:57.356966" elapsed="3.002203"/>
+</kw>
+<msg time="2025-11-03T18:58:00.439915" level="INFO">Switching context to context=4aad3a15-2604-405f-abd5-6a5c27f3beb6 in CURRENT</msg>
+<msg time="2025-11-03T18:58:00.489834" level="INFO">Successfully changed active context: context=4aad3a15-2604-405f-abd5-6a5c27f3beb6</msg>
+<msg time="2025-11-03T18:58:00.831412" level="INFO">Successfully closed Context</msg>
+<doc>Caso de prueba que llena el formulario de registro usando
+ localizadores accesibles (`role=`).
+ Incluye textbox, radio buttons, checkboxes, select y botón submit.</doc>
+<status status="PASS" start="2025-11-03T18:57:36.849219" elapsed="23.513582"/>
+</test>
+<doc>Demostración de exact match con text= y role= en Register.html</doc>
+<status status="PASS" start="2025-11-03T18:57:35.545126" elapsed="25.315561"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="exercise 2 getByText" id="s1" pass="1" fail="0" skip="0">exercise 2 getByText</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
