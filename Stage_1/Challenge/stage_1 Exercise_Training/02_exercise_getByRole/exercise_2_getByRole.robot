@@ -18,11 +18,11 @@ Ejemplo Get By Role
     Set Browser Timeout    120s
     New Page    ${url}      wait_until=domcontentloaded
 
-    #Navega a Ofertas del Día
+    #Da click en botón 'Ofertas del Día'
     Click        role=link[name="Ofertas del Día"]
     Sleep        3
 
-    #Navega a página de Amazon, dando clic en el Logo de Amazon
+    #Navega a página de Amazon, dando click en el Logo de Amazon
     Click        role=link[name="Amazon"]
     Sleep        3
 
@@ -54,15 +54,17 @@ Ejemplo Get By Role
     Click        ${SHOPPING_CART}
     Sleep        3
 
-    #Navega a página de Amazon, dando clic en el Logo de Amazon
+    #Navega a página de Amazon, dando click en el Logo de Amazon
     Click        role=link[name="Amazon"]
     Sleep        3
 
+    #Navega a sección 'Relojes favoritos'
     Scroll To Element    text=Relojes favoritos
     Click        text=Relojes favoritos
     Sleep        3
 
     #Click en botón 'Identifícate' de sección 'Ver recomendaciones personalizadas'
+    Scroll To Element    text=Ver recomendaciones personalizadas
     Click        role=link[name="Identifícate"]
     Sleep        3
 

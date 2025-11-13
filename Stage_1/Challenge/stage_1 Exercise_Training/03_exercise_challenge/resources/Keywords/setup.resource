@@ -1,9 +1,10 @@
-setup.resource
 *** Settings ***
 Documentation     Configuración del navegador en pruebas con Browser Library.
 Library           Browser
 Resource    ../pagesObject/homePage.resource
 Resource    ../pagesObject/loginPage.resource
+Resource    doLogin.resource
+
 
 *** Keywords ***
 Abrir navegador y acceder al sitio
