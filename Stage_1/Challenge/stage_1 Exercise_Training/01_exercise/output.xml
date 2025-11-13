@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.6 on win32)" generated="2025-11-03T19:23:47.318487" rpa="false" schemaversion="5">
+<suite id="s1" name="Exercise 1" source="C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\stage_1 Exercise_Training\01_exercise\exercise_1.robot">
+<test id="s1-t1" name="Enviar un Mensaje" line="11">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-11-03T19:23:48.018827" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\admin\\Documents\\QAXpert\\WEB\\qa-automation-web-robot-framework\\stage_1 Exercise_Training\\01_exercise\\browser\\traces\\temp\\a71b001a-e21c-4bc1-b1a3-5c9289de3ef5"}</msg>
+<msg time="2025-11-03T19:23:48.071842" level="INFO">Starting Browser process C:\Users\admin\Documents\QAXpert\WEB\qa-automation-web-robot-framework\venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:60139</msg>
+<msg time="2025-11-03T19:23:51.724714" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\admin\\Documents\\QAXpert\\WEB\\qa-automation-web-robot-framework\\stage_1 Exercise_Training\\01_exercise\\browser\\traces\\temp\\a71b001a-e21c-4bc1-b1a3-5c9289de3ef5"}</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-11-03T19:23:48.016615" elapsed="3.708865"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-11-03T19:23:51.751815" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-11-03T19:23:51.892134" level="INFO">Successfully created context. </msg>
+<msg time="2025-11-03T19:23:51.892372" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<arg>ignoreHTTPSErrors=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-11-03T19:23:51.746314" elapsed="0.146372"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-11-03T19:23:56.114917" level="INFO">Successfully initialized new page object and opened url: https://www.amazon.com/</msg>
+<arg>${URL}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-11-03T19:23:51.904822" elapsed="4.210870"/>
+</kw>
+<msg time="2025-11-03T19:23:56.617477" level="INFO">Switching context to context=653c2eff-201d-4e54-ab3a-201d467d353f in CURRENT</msg>
+<msg time="2025-11-03T19:23:56.661398" level="INFO">Successfully changed active context: context=653c2eff-201d-4e54-ab3a-201d467d353f</msg>
+<msg time="2025-11-03T19:23:56.914942" level="INFO">Successfully closed Context</msg>
+<doc>Verificar que el usuario sea redirigido a página de Amazon.</doc>
+<tag>critico</tag>
+<tag>positivo</tag>
+<status status="PASS" start="2025-11-03T19:23:48.013575" elapsed="8.119975"/>
+</test>
+<doc>Aprendiendo  todo sobre browser library</doc>
+<status status="PASS" start="2025-11-03T19:23:47.323067" elapsed="9.742509"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">critico</stat>
+<stat pass="1" fail="0" skip="0">positivo</stat>
+</tag>
+<suite>
+<stat name="Exercise 1" id="s1" pass="1" fail="0" skip="0">Exercise 1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

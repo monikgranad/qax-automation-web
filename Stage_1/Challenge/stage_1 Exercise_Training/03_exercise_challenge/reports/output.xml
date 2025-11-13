@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.6 on win32)" generated="2025-11-08T08:37:54.826491" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\admin\Documents\QAXpert\WEB\qax-automation-web\Stage_1\Challenge\stage_1 Exercise_Training\03_exercise_challenge\tests">
+<suite id="s1-s1" name="Features" source="C:\Users\admin\Documents\QAXpert\WEB\qax-automation-web\Stage_1\Challenge\stage_1 Exercise_Training\03_exercise_challenge\tests\features">
+<suite id="s1-s1-s1" name="Test Login" source="C:\Users\admin\Documents\QAXpert\WEB\qax-automation-web\Stage_1\Challenge\stage_1 Exercise_Training\03_exercise_challenge\tests\features\Test_Login.robot">
+<test id="s1-s1-s1-t1" name="Inicio de sesión exitoso con credenciales válidas" line="6">
+<kw name="Given Ingresar al login">
+<msg time="2025-11-08T08:37:54.950287" level="FAIL">No keyword with name 'Given Ingresar al login' found.</msg>
+<status status="FAIL" start="2025-11-08T08:37:54.949682" elapsed="0.000825">No keyword with name 'Given Ingresar al login' found.</status>
+</kw>
+<kw name="When Iniciar sesión con credenciales válidas">
+<status status="NOT RUN" start="2025-11-08T08:37:54.951850" elapsed="0.000126"/>
+</kw>
+<kw name="Then Validar acceso exitoso">
+<status status="NOT RUN" start="2025-11-08T08:37:54.952594" elapsed="0.000077"/>
+</kw>
+<doc>Este caso valida el flujo correcto de inicio de sesión en el CURA Healthcare Service.
+Se completan los campos de correo y contraseña, se envía el formulario
+y se valida que el usuario acceda al panel principal del visitante.</doc>
+<status status="FAIL" start="2025-11-08T08:37:54.942624" elapsed="0.010647">No keyword with name 'Given Ingresar al login' found.</status>
+</test>
+<status status="FAIL" start="2025-11-08T08:37:54.936271" elapsed="0.019741"/>
+</suite>
+<status status="FAIL" start="2025-11-08T08:37:54.931849" elapsed="0.027483"/>
+</suite>
+<status status="FAIL" start="2025-11-08T08:37:54.832358" elapsed="0.128930"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="1" skip="0">Tests</stat>
+<stat name="Features" id="s1-s1" pass="0" fail="1" skip="0">Tests.Features</stat>
+<stat name="Test Login" id="s1-s1-s1" pass="0" fail="1" skip="0">Tests.Features.Test Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

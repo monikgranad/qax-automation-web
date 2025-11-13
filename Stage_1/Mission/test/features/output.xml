@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.6 on win32)" generated="2025-11-12T15:42:04.898284" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Login" source="C:\Users\admin\Documents\QAXpert\WEB\qax-automation-web\Stage_1\Mission\test\features\Test_Login.robot">
+<kw name="Abrir navegador y acceder al sitio" owner="setup" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-11-12T15:42:05.971060" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\admin\\Documents\\QAXpert\\WEB\\qax-automation-web\\Stage_1\\Mission\\test\\features\\browser\\traces\\temp\\6db0ac87-d1dd-46aa-96a8-0e9895fb7d64"}</msg>
+<msg time="2025-11-12T15:42:06.074481" level="INFO">Starting Browser process C:\Users\admin\Documents\QAXpert\WEB\qax-automation-web\Stage_1\Mission\venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:58813</msg>
+<msg time="2025-11-12T15:42:10.084621" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\admin\\Documents\\QAXpert\\WEB\\qax-automation-web\\Stage_1\\Mission\\test\\features\\browser\\traces\\temp\\6db0ac87-d1dd-46aa-96a8-0e9895fb7d64"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-11-12T15:42:05.967068" elapsed="4.118172"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-11-12T15:42:10.091604" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-11-12T15:42:10.179970" level="INFO">Successfully created context. </msg>
+<msg time="2025-11-12T15:42:10.180169" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-11-12T15:42:10.085986" elapsed="0.094414"/>
+</kw>
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>120s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2025-11-12T15:42:10.181005" elapsed="0.014013"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-11-12T15:42:16.757109" level="INFO">Successfully initialized new page object and opened url: https://demoqa.com/</msg>
+<arg>${HOME_URL}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-11-12T15:42:10.195667" elapsed="6.562302"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-12T15:42:21.760350" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-12T15:42:16.758760" elapsed="5.001884"/>
+</kw>
+<doc>Abre el navegador Chromium y navega hacia la URL definida en la variable https://demoqa.com/.</doc>
+<status status="PASS" start="2025-11-12T15:42:05.963247" elapsed="15.798637"/>
+</kw>
+<test id="s1-t1" name="Inicio de sesión exitoso con credenciales válidas" line="9">
+<kw name="Given Ingresar al login" owner="doLogin">
+<kw name="Scroll To Element" owner="Browser">
+<arg>text=Book Store Application</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-11-12T15:42:21.827153" elapsed="0.274181"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-12T15:42:23.103737" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-12T15:42:22.102702" elapsed="1.001422"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-12T15:42:23.106875" level="INFO">Clicks the element 'role=heading[name="Book Store Application"]'.</msg>
+<arg>${BTN_BOOK_STORE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-12T15:42:23.104763" elapsed="0.972564"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-11-12T15:42:24.312726" level="INFO">Waited for Element with selector id=login at state visible</msg>
+<arg>${BTN_LOGIN}</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-11-12T15:42:24.077911" elapsed="0.235344"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-12T15:42:29.315318" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-12T15:42:24.313841" elapsed="5.001738"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-12T15:42:29.319092" level="INFO">Clicks the element 'id=login'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-12T15:42:29.316084" elapsed="0.127819"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-11-12T15:42:29.466031" level="INFO">Waited for Element with selector id=userName at state visible</msg>
+<arg>${TXT_USERNAME}</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-11-12T15:42:29.444485" elapsed="0.022258"/>
+</kw>
+<doc>Ingresar al login</doc>
+<status status="PASS" start="2025-11-12T15:42:21.824960" elapsed="7.642569"/>
+</kw>
+<kw name="When Iniciar sesión con credenciales válidas" owner="doLogin">
+<kw name="Scroll To Element" owner="Browser">
+<arg>${BTN_LOGIN}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-11-12T15:42:29.554307" elapsed="0.062472"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-11-12T15:42:29.621011" level="INFO">Fills the text 'NinjaForTesting_1001' in the given field.</msg>
+<arg>${TXT_USERNAME}</arg>
+<arg>${USERNAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-11-12T15:42:29.618076" elapsed="0.079966"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-11-12T15:42:29.701407" level="INFO">Fills the text 'Test@@1234' in the given field.</msg>
+<arg>${TXT_PASSWORD}</arg>
+<arg>${PASSWORD}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-11-12T15:42:29.698690" elapsed="0.067425"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-12T15:42:32.768551" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-12T15:42:29.766724" elapsed="3.002397"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-12T15:42:32.777945" level="INFO">Clicks the element 'id=login'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-12T15:42:32.769895" elapsed="0.076336"/>
+</kw>
+<doc>Ingresa el usuario y la contraseña en el formulario de login y envía los datos.</doc>
+<status status="PASS" start="2025-11-12T15:42:29.552465" elapsed="3.294292"/>
+</kw>
+<kw name="Then Validar acceso" owner="doLogin">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-11-12T15:42:35.855376" level="INFO">Waited for Element with selector id=userName-value at state visible</msg>
+<arg>${USERNAME_VALUE}</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-11-12T15:42:32.907871" elapsed="2.948336"/>
+</kw>
+<msg time="2025-11-12T15:42:35.858947" level="INFO">${visible} = True</msg>
+<var>${visible}</var>
+<arg>Wait For Elements State</arg>
+<arg>${USERNAME_VALUE}</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-12T15:42:32.901383" elapsed="2.958131"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-12T15:42:38.862598" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-12T15:42:35.860247" elapsed="3.003543"/>
+</kw>
+<if>
+<branch type="IF" condition="${visible}==True">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-11-12T15:42:38.895432" level="INFO">Waited for Element with selector id=submit at state visible</msg>
+<arg>${BTN_LOGOUT}</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-11-12T15:42:38.875674" elapsed="0.020803"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-11-12T15:42:38.899112" level="INFO">Fills the text 'Javascript' in the given field.</msg>
+<arg>${BTN_SEARCHBOX}</arg>
+<arg>Javascript</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-11-12T15:42:38.897028" elapsed="0.066592"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-12T15:42:40.966740" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-12T15:42:38.964226" elapsed="2.002707"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-12T15:42:40.968856" level="INFO">Clicks the element 'id=basic-addon2'.</msg>
+<arg>${BTN_SEARCH}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-12T15:42:40.967246" elapsed="0.055182"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-12T15:42:44.031356" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-12T15:42:41.023512" elapsed="3.008193"/>
+</kw>
+<kw name="Get Element Count" owner="Browser">
+<msg time="2025-11-12T15:42:44.074306" level="INFO">${row_count} = 0</msg>
+<var>${row_count}</var>
+<arg>css=table tbody t</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.034015" elapsed="0.040468"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>El número de filas es: ${row_count}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.076615" elapsed="0.003348"/>
+</kw>
+<kw name="Get Element Count" owner="Browser">
+<msg time="2025-11-12T15:42:44.097891" level="INFO">${num_filas} = 10</msg>
+<var>${num_filas}</var>
+<arg>css=.rt-tbody .rt-tr-group</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.080415" elapsed="0.017607"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>El número total de filas es: ${num_filas}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.099180" elapsed="0.001279"/>
+</kw>
+<kw name="Get Element Count" owner="Browser">
+<msg time="2025-11-12T15:42:44.121002" level="INFO">${num_filas_visibles} = 4</msg>
+<var>${num_filas_visibles}</var>
+<arg>css=.rt-tbody .rt-tr-group:not(:has(.-padRow))</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.101038" elapsed="0.020490"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>El número de filas con datos es: ${num_filas_visibles}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.122081" elapsed="0.002685"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-11-12T15:42:44.144750" level="INFO">Waited for Element with selector css=.rt-tbody at state visible</msg>
+<arg>css=.rt-tbody</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.125383" elapsed="0.020366"/>
+</kw>
+<kw name="Get Element Count" owner="Browser">
+<msg time="2025-11-12T15:42:44.160966" level="INFO">${num_libros} = 4</msg>
+<var>${num_libros}</var>
+<arg>css=.rt-tr-group img</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.146381" elapsed="0.014754"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Se encontraron ${num_libros} libros</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.162752" elapsed="0.001337"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${num_libros} &gt; 1</arg>
+<arg>msg=❌ Solo se encontró un libro o ninguno.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.164926" elapsed="0.005858"/>
+</kw>
+<kw name="Get Elements" owner="Browser">
+<msg time="2025-11-12T15:42:44.199710" level="INFO">Found locator('.rt-tr-group .rt-td a').first(),locator('.rt-tr-group .rt-td a').nth(1),locator('.rt-tr-group .rt-td a').nth(2),locator('.rt-tr-group .rt-td a').nth(3) Locators successfully.</msg>
+<msg time="2025-11-12T15:42:44.200287" level="INFO">${links} = ['css=.rt-tr-group .rt-td a &gt;&gt; nth=0', 'css=.rt-tr-group .rt-td a &gt;&gt; nth=1', 'css=.rt-tr-group .rt-td a &gt;&gt; nth=2', 'css=.rt-tr-group .rt-td a &gt;&gt; nth=3']</msg>
+<var>${links}</var>
+<arg>${LIBROS_LOCATOR}</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
+for all matched elements by ``selector``.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.171784" elapsed="0.028603"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-11-12T15:42:44.203067" level="INFO">Length is 4.</msg>
+<msg time="2025-11-12T15:42:44.203306" level="INFO">${num_links} = 4</msg>
+<var>${num_links}</var>
+<arg>${links}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.201735" elapsed="0.001641"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T15:42:44.205937" level="INFO">Se encontraron 4 libros</msg>
+<arg>Se encontraron ${num_links} libros</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.204370" elapsed="0.002055"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-11-12T15:42:44.257326" level="INFO">Text: 'Learning JavaScript Design Patterns'</msg>
+<msg time="2025-11-12T15:42:44.257594" level="INFO">${titulo} = Learning JavaScript Design Patterns</msg>
+<var>${titulo}</var>
+<arg>${link}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.215619" elapsed="0.042038"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Libro encontrado: ${titulo}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.257960" elapsed="0.000789"/>
+</kw>
+<kw name="Should Contain Any" owner="BuiltIn">
+<arg>${titulo}</arg>
+<arg>JavaScript</arg>
+<doc>Fails if ``container`` does not contain any of the ``*items``.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.259842" elapsed="0.001863"/>
+</kw>
+<var name="${link}">css=.rt-tr-group .rt-td a &gt;&gt; nth=0</var>
+<status status="PASS" start="2025-11-12T15:42:44.214881" elapsed="0.047089"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-11-12T15:42:44.304353" level="INFO">Text: 'Speaking JavaScript'</msg>
+<msg time="2025-11-12T15:42:44.304793" level="INFO">${titulo} = Speaking JavaScript</msg>
+<var>${titulo}</var>
+<arg>${link}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.264524" elapsed="0.040401"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Libro encontrado: ${titulo}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.306512" elapsed="0.002673"/>
+</kw>
+<kw name="Should Contain Any" owner="BuiltIn">
+<arg>${titulo}</arg>
+<arg>JavaScript</arg>
+<doc>Fails if ``container`` does not contain any of the ``*items``.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.309721" elapsed="0.001002"/>
+</kw>
+<var name="${link}">css=.rt-tr-group .rt-td a &gt;&gt; nth=1</var>
+<status status="PASS" start="2025-11-12T15:42:44.263753" elapsed="0.047162"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-11-12T15:42:44.355951" level="INFO">Text: 'Programming JavaScript Applications'</msg>
+<msg time="2025-11-12T15:42:44.356670" level="INFO">${titulo} = Programming JavaScript Applications</msg>
+<var>${titulo}</var>
+<arg>${link}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.312131" elapsed="0.044677"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Libro encontrado: ${titulo}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.357326" elapsed="0.003406"/>
+</kw>
+<kw name="Should Contain Any" owner="BuiltIn">
+<arg>${titulo}</arg>
+<arg>JavaScript</arg>
+<doc>Fails if ``container`` does not contain any of the ``*items``.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.361242" elapsed="0.000933"/>
+</kw>
+<var name="${link}">css=.rt-tr-group .rt-td a &gt;&gt; nth=2</var>
+<status status="PASS" start="2025-11-12T15:42:44.311374" elapsed="0.051049"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-11-12T15:42:44.403379" level="INFO">Text: 'Eloquent JavaScript, Second Edition'</msg>
+<msg time="2025-11-12T15:42:44.403815" level="INFO">${titulo} = Eloquent JavaScript, Second Edition</msg>
+<var>${titulo}</var>
+<arg>${link}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.363752" elapsed="0.040209"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Libro encontrado: ${titulo}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.404610" elapsed="0.001299"/>
+</kw>
+<kw name="Should Contain Any" owner="BuiltIn">
+<arg>${titulo}</arg>
+<arg>JavaScript</arg>
+<doc>Fails if ``container`` does not contain any of the ``*items``.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.406526" elapsed="0.001000"/>
+</kw>
+<var name="${link}">css=.rt-tr-group .rt-td a &gt;&gt; nth=3</var>
+<status status="PASS" start="2025-11-12T15:42:44.362908" elapsed="0.044843"/>
+</iter>
+<var>${link}</var>
+<value>@{links}</value>
+<status status="PASS" start="2025-11-12T15:42:44.209043" elapsed="0.198909"/>
+</for>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-12T15:42:44.411096" level="INFO">Clicks the element 'id=submit'.</msg>
+<arg>${BTN_LOGOUT}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.409337" elapsed="0.101081"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>cur d - C:\\Users\\admin\\Documents\\QAXpert\\WEB\\qax-automation-web\\Stage_1\\Mission\\resources\\keywords</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.512601" elapsed="0.030428"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>exe d - ${EXECDIR}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-12T15:42:44.543695" elapsed="0.087263"/>
+</kw>
+<status status="PASS" start="2025-11-12T15:42:38.869774" elapsed="5.761483"/>
+</branch>
+<branch type="ELSE">
+<kw name="Get Text" owner="Browser">
+<var>${LBL_ERROR}</var>
+<arg>xpath=//*[@id="name"]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-11-12T15:42:44.633545" elapsed="0.000466"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${LBL_ERROR}</arg>
+<arg>Invalid username or password!</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" start="2025-11-12T15:42:44.634619" elapsed="0.000447"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${LBL_ERROR}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-11-12T15:42:44.635652" elapsed="0.000650"/>
+</kw>
+<status status="NOT RUN" start="2025-11-12T15:42:44.632585" elapsed="0.003913"/>
+</branch>
+<status status="PASS" start="2025-11-12T15:42:38.867879" elapsed="5.768760"/>
+</if>
+<doc>Verifica que el usuario haya accedido al panel del visitante y muestre mensaje de error.</doc>
+<status status="PASS" start="2025-11-12T15:42:32.898477" elapsed="11.738364"/>
+</kw>
+<doc>Este caso valida el flujo correcto de inicio de sesión en Book Store.
+Se completan los campos de correo y contraseña, se envía el formulario
+y se valida que el usuario acceda al panel principal del visitante.</doc>
+<status status="PASS" start="2025-11-12T15:42:21.764546" elapsed="22.879590"/>
+</test>
+<status status="PASS" start="2025-11-12T15:42:04.902946" elapsed="39.793882"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Login" id="s1" pass="1" fail="0" skip="0">Test Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

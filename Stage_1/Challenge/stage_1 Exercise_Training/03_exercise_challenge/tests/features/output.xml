@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.6 on win32)" generated="2025-11-10T13:37:09.100470" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Login" source="C:\Users\admin\Documents\QAXpert\WEB\qax-automation-web\Stage_1\Challenge\stage_1 Exercise_Training\03_exercise_challenge\tests\features\Test_Login.robot">
+<kw name="Abrir navegador y acceder al sitio" owner="setup" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-11-10T13:37:09.883726" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\admin\\Documents\\QAXpert\\WEB\\qax-automation-web\\Stage_1\\Challenge\\stage_1 Exercise_Training\\03_exercise_challenge\\tests\\features\\browser\\traces\\temp\\a4ffa1a9-558e-4479-aa74-2382d29f5d0a"}</msg>
+<msg time="2025-11-10T13:37:09.962196" level="INFO">Starting Browser process C:\Users\admin\Documents\QAXpert\WEB\qax-automation-web\Stage_1\Challenge\stage_1 Exercise_Training\03_exercise_challenge\venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:59710</msg>
+<msg time="2025-11-10T13:37:14.747045" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\admin\\Documents\\QAXpert\\WEB\\qax-automation-web\\Stage_1\\Challenge\\stage_1 Exercise_Training\\03_exercise_challenge\\tests\\features\\browser\\traces\\temp\\a4ffa1a9-558e-4479-aa74-2382d29f5d0a"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-11-10T13:37:09.881298" elapsed="4.866473"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-11-10T13:37:14.754393" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-11-10T13:37:14.853180" level="INFO">Successfully created context. </msg>
+<msg time="2025-11-10T13:37:14.853399" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-11-10T13:37:14.748639" elapsed="0.105038"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-11-10T13:37:17.572638" level="INFO">Successfully initialized new page object and opened url: https://katalon-demo-cura.herokuapp.com/</msg>
+<arg>${HOME_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-11-10T13:37:14.854237" elapsed="2.718988"/>
+</kw>
+<doc>Abre el navegador Chromium y navega hacia la URL definida en la variable https://katalon-demo-cura.herokuapp.com/.</doc>
+<status status="PASS" start="2025-11-10T13:37:09.879795" elapsed="7.694563"/>
+</kw>
+<test id="s1-t1" name="Inicio de sesión exitoso con credenciales válidas" line="9">
+<kw name="Given Ingresar al login" owner="doLogin">
+<kw name="Click" owner="Browser">
+<msg time="2025-11-10T13:37:17.635409" level="INFO">Clicks the element 'id=btn-make-appointment'.</msg>
+<arg>${BTN_MAKE_APPOINTMENT}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-10T13:37:17.633665" elapsed="0.407730"/>
+</kw>
+<doc>Ingresar al login</doc>
+<status status="PASS" start="2025-11-10T13:37:17.632296" elapsed="0.409471"/>
+</kw>
+<kw name="When Iniciar sesión con credenciales válidas" owner="doLogin">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-11-10T13:37:18.066890" level="INFO">Fills the text 'John Doe' in the given field.</msg>
+<arg>${TXT_USERNAME}</arg>
+<arg>${USERNAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-11-10T13:37:18.064905" elapsed="0.230644"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-11-10T13:37:18.297991" level="INFO">Fills the text 'ThisIsNotAPassword' in the given field.</msg>
+<arg>${TXT_PASSWORD}</arg>
+<arg>${PASSWORD}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-11-10T13:37:18.296067" elapsed="0.074219"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-10T13:37:18.374196" level="INFO">Clicks the element 'id=btn-login'.</msg>
+<arg>${BTN_LOGIN}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-10T13:37:18.372431" elapsed="0.568254"/>
+</kw>
+<doc>Ingresa el usuario y la contraseña en el formulario de login y envía los datos.</doc>
+<status status="PASS" start="2025-11-10T13:37:18.063680" elapsed="0.877342"/>
+</kw>
+<kw name="Then Validar acceso" owner="doLogin">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-11-10T13:37:19.136394" level="INFO">Waited for Element with selector xpath=//*[@id="appointment"]/div/div/div/h2 at state visible</msg>
+<arg>xpath=//*[@id="appointment"]/div/div/div/h2</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-11-10T13:37:18.952309" elapsed="0.185037"/>
+</kw>
+<msg time="2025-11-10T13:37:19.138224" level="INFO">${visible} = True</msg>
+<var>${visible}</var>
+<arg>Wait For Elements State</arg>
+<arg>xpath=//*[@id="appointment"]/div/div/div/h2</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-10T13:37:18.950424" elapsed="0.187924"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-10T13:37:22.141858" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-10T13:37:19.140339" elapsed="3.001756"/>
+</kw>
+<if>
+<branch type="IF" condition="${visible}==True">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-11-10T13:37:22.162172" level="INFO">Waited for Element with selector id=btn-book-appointment at state visible</msg>
+<arg>${BTN_BOOK}</arg>
+<arg>visible</arg>
+<arg>timeout=5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-11-10T13:37:22.143526" elapsed="0.019168"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-10T13:37:22.164886" level="INFO">Clicks the element 'id=menu-toggle'.</msg>
+<arg>${BTN_MENU}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-10T13:37:22.163288" elapsed="0.058939"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-10T13:37:23.223565" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-10T13:37:22.222744" elapsed="1.000989"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-10T13:37:23.225028" level="INFO">Clicks the element 'role=link[name="Logout"]'.</msg>
+<arg>${BTN_LOGOUT}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-10T13:37:23.224018" elapsed="0.425217"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>cur d - C:\\Users\\admin\\Documents\\QAXpert\\WEB\\qax-automation-web\\Stage_1\\Challenge\\stage_1 Exercise_Training\\03_exercise_challenge\\resources\\Keywords</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-10T13:37:23.649868" elapsed="0.001292"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>exe d - ${EXECDIR}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-10T13:37:23.651674" elapsed="0.006609"/>
+</kw>
+<status status="PASS" start="2025-11-10T13:37:22.142490" elapsed="1.516133"/>
+</branch>
+<branch type="ELSE">
+<kw name="Get Text" owner="Browser">
+<var>${LBL_ERROR}</var>
+<arg>xpath=//*[@id="login"]/div/div/div[1]/p[2]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-11-10T13:37:23.661277" elapsed="0.000720"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${LBL_ERROR}</arg>
+<arg>Login failed! Please ensure the username and password are valid</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" start="2025-11-10T13:37:23.662543" elapsed="0.000541"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${LBL_ERROR}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-11-10T13:37:23.663672" elapsed="0.000562"/>
+</kw>
+<status status="NOT RUN" start="2025-11-10T13:37:23.658871" elapsed="0.005616"/>
+</branch>
+<status status="PASS" start="2025-11-10T13:37:22.142380" elapsed="1.522275"/>
+</if>
+<doc>Verifica que el usuario haya accedido al panel del visitante y muestre mensaje de error.</doc>
+<status status="PASS" start="2025-11-10T13:37:18.945792" elapsed="4.719125"/>
+</kw>
+<doc>Este caso valida el flujo correcto de inicio de sesión en el CURA Healthcare Service.
+Se completan los campos de correo y contraseña, se envía el formulario
+y se valida que el usuario acceda al panel principal del visitante.</doc>
+<status status="PASS" start="2025-11-10T13:37:17.575997" elapsed="6.097266"/>
+</test>
+<status status="PASS" start="2025-11-10T13:37:09.104201" elapsed="14.661494"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Login" id="s1" pass="1" fail="0" skip="0">Test Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.6 on win32)" generated="2025-11-07T14:30:40.478882" rpa="false" schemaversion="5">
+<suite id="s1" name="exercise 2 getByRole" source="C:\Users\admin\Documents\QAXpert\WEB\qax-automation-web\Stage_1\Challenge\stage_1 Exercise_Training\02_exercise_getByRole\exercise_2_getByRole.robot">
+<test id="s1-t1" name="Ejemplo Get By Role" line="15">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-11-07T14:30:42.398696" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\admin\\Documents\\QAXpert\\WEB\\qax-automation-web\\Stage_1\\Challenge\\stage_1 Exercise_Training\\02_exercise_getByRole\\browser\\traces\\temp\\feadf393-95d3-4e00-963e-6db285c7035c"}</msg>
+<msg time="2025-11-07T14:30:42.601284" level="INFO">Starting Browser process C:\Users\admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:65164</msg>
+<msg time="2025-11-07T14:30:48.603049" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\admin\\Documents\\QAXpert\\WEB\\qax-automation-web\\Stage_1\\Challenge\\stage_1 Exercise_Training\\02_exercise_getByRole\\browser\\traces\\temp\\feadf393-95d3-4e00-963e-6db285c7035c"}</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-11-07T14:30:42.395708" elapsed="6.207941"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-11-07T14:30:48.725944" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-11-07T14:30:48.843587" level="INFO">Successfully created context. </msg>
+<msg time="2025-11-07T14:30:48.843813" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<arg>ignoreHTTPSErrors=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-11-07T14:30:48.714396" elapsed="0.129698"/>
+</kw>
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>120s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2025-11-07T14:30:48.885325" elapsed="0.020314"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-11-07T14:30:52.058616" level="INFO">Successfully initialized new page object and opened url: https://www.amazon.com/?language=es_US</msg>
+<arg>${url}</arg>
+<arg>wait_until=domcontentloaded</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-11-07T14:30:48.925738" elapsed="3.133864"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-07T14:30:52.089453" level="INFO">Clicks the element 'role=link[name="Ofertas del Día"]'.</msg>
+<arg>role=link[name="Ofertas del Día"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-07T14:30:52.087736" elapsed="10.723100"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-07T14:31:05.881932" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-07T14:31:02.846307" elapsed="3.037044"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-07T14:31:05.931613" level="INFO">Clicks the element 'role=link[name="Amazon"]'.</msg>
+<arg>role=link[name="Amazon"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-07T14:31:05.925186" elapsed="1.165368"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-07T14:31:10.097910" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-07T14:31:07.096717" elapsed="3.001493"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2025-11-07T14:31:10.515785" level="INFO">Title: 'Amazon.com en espanol. Gasta menos. Sonríe más.'</msg>
+<msg time="2025-11-07T14:31:10.518940" level="INFO">${title} = Amazon.com en espanol. Gasta menos. Sonríe más.</msg>
+<var>${title}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-11-07T14:31:10.158886" elapsed="0.360277"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${title}</arg>
+<arg>Amazon.com en espanol. Gasta menos. Sonríe más.</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-11-07T14:31:10.593167" elapsed="0.003782"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-07T14:31:10.851135" level="INFO">Amazon.com en espanol. Gasta menos. Sonríe más.</msg>
+<arg>${title}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-07T14:31:10.689297" elapsed="0.162070"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-07T14:31:13.973626" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-07T14:31:10.971639" elapsed="3.002259"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-11-07T14:31:13.978652" level="INFO">Fills the text 'Navidad' in the given field.</msg>
+<arg>${TXT_SEARCH}</arg>
+<arg>Navidad</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-11-07T14:31:13.975753" elapsed="0.265084"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-07T14:31:14.244876" level="INFO">Clicks the element 'role=button[name="Ir"]'.</msg>
+<arg>role=button[name="Ir"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-07T14:31:14.242891" elapsed="0.707860"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-07T14:31:17.957977" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-07T14:31:14.956409" elapsed="3.001835"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-07T14:31:17.963548" level="INFO">Clicks the element 'role=button[name="Abrir menú de todas las categorías"]'.</msg>
+<arg>role=button[name="Abrir menú de todas las categorías"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-07T14:31:17.958931" elapsed="3.877791"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-07T14:31:24.839611" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-07T14:31:21.838223" elapsed="3.001670"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-07T14:31:24.842427" level="INFO">Clicks the element 'role=button[name="Cerrar menú"]'.</msg>
+<arg>role=button[name="Cerrar menú"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-07T14:31:24.840874" elapsed="0.575828"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-07T14:31:28.425277" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-07T14:31:25.424223" elapsed="3.001390"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-11-07T14:31:28.430444" level="INFO">Selects the option(s) Computadoras by attribute SelectAttribute.label from element id=searchDropdownBox.</msg>
+<arg>${COMBO_SEARCH}</arg>
+<arg>text</arg>
+<arg>Computadoras</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-07T14:31:28.426813" elapsed="0.255013"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-07T14:31:31.684695" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-07T14:31:28.683168" elapsed="3.002042"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-11-07T14:31:31.689820" level="INFO">Fills the text 'Laptop' in the given field.</msg>
+<arg>${TXT_SEARCH}</arg>
+<arg>Laptop</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-11-07T14:31:31.686431" elapsed="0.129112"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-07T14:31:31.819421" level="INFO">Clicks the element 'role=button[name="Ir"]'.</msg>
+<arg>role=button[name="Ir"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-07T14:31:31.817189" elapsed="1.331823"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-07T14:31:36.151634" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-07T14:31:33.149827" elapsed="3.002821"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-07T14:31:36.156073" level="INFO">Clicks the element 'id=nav-cart'.</msg>
+<arg>${SHOPPING_CART}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-07T14:31:36.153956" elapsed="1.026088"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-07T14:31:40.183350" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-07T14:31:37.182019" elapsed="3.001645"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-07T14:31:40.186887" level="INFO">Clicks the element 'role=link[name="Amazon"]'.</msg>
+<arg>role=link[name="Amazon"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-07T14:31:40.185071" elapsed="0.600292"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-07T14:31:43.789221" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-07T14:31:40.786752" elapsed="3.002917"/>
+</kw>
+<kw name="Scroll To Element" owner="Browser">
+<arg>text=Relojes favoritos</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-11-07T14:31:43.790781" elapsed="0.707790"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-07T14:31:44.505257" level="INFO">Clicks the element 'text=Relojes favoritos'.</msg>
+<arg>text=Relojes favoritos</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-07T14:31:44.503611" elapsed="0.404531"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-07T14:31:47.911263" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-07T14:31:44.910105" elapsed="3.001449"/>
+</kw>
+<kw name="Scroll To Element" owner="Browser">
+<arg>text=Ver recomendaciones personalizadas</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" start="2025-11-07T14:31:47.912246" elapsed="0.047199"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-11-07T14:31:47.960991" level="INFO">Clicks the element 'role=link[name="Identifícate"]'.</msg>
+<arg>role=link[name="Identifícate"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-07T14:31:47.959988" elapsed="0.574762"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-07T14:31:51.553788" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-07T14:31:48.551998" elapsed="3.001968"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-11-07T14:31:53.508059" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-07T14:31:51.554528" elapsed="1.953820"/>
+</kw>
+<status status="PASS" start="2025-11-07T14:30:42.392994" elapsed="71.117073"/>
+</test>
+<status status="PASS" start="2025-11-07T14:30:40.483598" elapsed="73.048125"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="exercise 2 getByRole" id="s1" pass="1" fail="0" skip="0">exercise 2 getByRole</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
